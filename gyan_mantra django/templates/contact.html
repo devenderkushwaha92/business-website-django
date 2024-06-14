@@ -1,0 +1,114 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="{% static 'CSS/contact.css' %}">
+    <script src="https://kit.fontawesome.com/2a82f66617.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+        <div class="logo">
+          <a href="#"><img src="{% static 'image/logo.png' %}" alt="Gyan Mantra Logo"><h3>Gyan Mantra Toppers Academy</h3></a>
+        </div>
+        <div class="toggle">
+          <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+          <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="{% url 'about' %}"><i class="fa-solid fa-info"></i>About</a></li>
+          <li><a href=""><i class="fa-solid fa-phone"></i>Contact</a></li>
+
+        </ul>
+    </nav>
+{% comment %} code {% endcomment %}
+<div class="container">
+  <div class="contact-info">
+    <div class="call">
+      <h3><i class="fa-solid fa-phone"></i> &nbsp Contact Us</h3>
+      <p>Phone: +91 81307 36542</p>
+      <p>Email: gyanmantratoppersacademy@gmail.com</p>
+    </div>
+    <div class="location">
+      <h3><i class="fa-solid fa-location-dot"></i> &nbsp Location</h3>
+      <p>Branch 1 : Basement,Plot No. 17,Sector 5,vaishali,GZB </p>
+     <p>Branch 2 : shop No 1 ,Plot No. 75,Sector 5(Near mother Dairy),vaishali,GZB </p>
+    </div>
+    <div class="timing">
+    </div>
+  </div>
+    
+    <!-- Image -->
+    <div class="contact-image">
+        <img src="{% static 'image/shiv.png' %}" alt="Contact Image">
+    </div>
+</div>
+
+
+
+
+
+
+
+    <footer class="footer">
+      <!-- Social media div -->
+      <div class="social-media">
+        <p>Gyan Mantra Toppers Academy</p>
+        <p>Branch 1 : Basement,Plot No. 17,Sector 5,vaishali,GZB </p>
+        <p>Branch 2 : shop No 1 ,Plot No. 75,Sector 5(Near mother Dairy),vaishali,GZB </p>
+        <br>
+        <p>Follow Us on :</p>
+
+        <a href="https://www.facebook.com/profile.php?id=61558241592889" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/gyanmantratoppersacademy/?next=%2F" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/gyan-mantra-toppers-academy-873770304/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@GyanMantraToppersAcademy" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+
+      <!-- Map div -->
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.8387337214817!2d77.32919241444707!3d28.64819588240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce6d8e953bbf7%3A0x8e88d99714a900f!2sBasement%2C%20Plot%20No.%2017%2C%20Sector%205%2C%20Vaishali%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201110!5e0!3m2!1sen!2sin!4v1640045869677" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+  </footer>
+  <footer class="footer">
+    <p>&copy; 2024 Gyan Mantra Toppers Academy. All Rights Reserved.</p>
+  </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+      $(function(){
+        $(".toggle").on("click", function(){
+          if($(".menu").hasClass("active")){
+            $(".menu").removeClass("active");
+            $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+          } else{
+            $(".menu").addClass("active");
+            $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+          }
+        })
+      })
+    </script>
+
+    <script>
+  function toggleText() {
+    var extraText = document.getElementById("extraText");
+    var btnText = document.getElementById("readMoreBtn").getElementsByTagName("a")[0];
+
+    if (extraText.style.display === "none") {
+      // Show extra text
+      extraText.style.display = "block";
+      btnText.innerHTML = "Read Less";
+    } else {
+      // Hide extra text
+      extraText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    }
+  }
+</script>
+  </body>
+</html>
